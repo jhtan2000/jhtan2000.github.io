@@ -298,6 +298,7 @@ a{
     border: 5px solid var(--first-color);
     margin: 2rem;
     padding: 0 0 2rem;
+    transition: transition: all 1s ease;
 }
 
 .portfolio-content{
