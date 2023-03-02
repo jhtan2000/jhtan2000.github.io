@@ -478,7 +478,6 @@ a{
 
 .portfolio-list{
     display: grid;
-    grid-template-columns: repeat(autofill, minmax(1fr, 1fr));
     max-width: 100%;
     gap: 1rem;
     margin: 0 auto;
@@ -492,6 +491,7 @@ a{
     border: 5px solid var(--first-color);
     overflow: hidden;
     cursor: pointer;
+    transition: all 1s ease;
 }
 
 .portfolio-img:hover{
@@ -923,7 +923,7 @@ a{
     }
 
     .portfolio-img{
-        width: 270px;
+        width: 800px;
     }
 
     .portfolio-list{
