@@ -148,7 +148,8 @@ body {
 }
 
 .project__card {
-    padding-bottom: 2em;
+    padding-bottom: 4em;
+    margin-bottom: 4em;
     transition: all .4s ease-out;
     z-index: var(--z-tooltip);
 }
