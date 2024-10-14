@@ -1,0 +1,224 @@
+.project {
+    background: var(--project-bg-color);
+}
+.project-container {
+    position: relative;
+    transition: .5 ease;
+}
+.project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-card {
+    padding: 0 0 1rem;
+    margin-bottom: 4rem;
+    border: 1px solid;
+    transition: all .4s ease;
+    z-index: var(--z-tooltip);
+}
+
+.project-card:hover {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.project-title,
+.project-info p {
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    align-items: end;
+}
+
+.project-title .title-name {
+    font-size: var(--fs-h1);
+    font-family: var(--ff-body);
+}
+
+.title-tag {
+    position: relative;
+    display: inline-block;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-med);
+    transform: translateX(-.5em);
+    padding-left: 2rem;
+}
+
+.title-tag span {
+    background: var(--second-color);
+    border-radius: .2rem;
+}
+
+.title-tag::before, .title-tag::after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--text-color);
+    position: absolute;
+    top: 50%;
+}
+
+.title-tag::before {
+    left: .5rem;
+}
+
+.title-tag::after {
+    right: -1.5rem;
+    display: none;
+}
+
+.project-info span{
+    font-weight: var(--fw-semi);
+}
+
+.project-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.project-media {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    margin: auto;
+    padding: 0% 0% 56.25%; /* 16:9 ratio */
+    border-radius: .2rem;
+    overflow: hidden;
+}
+
+.project-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.project-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: var(--z-fixed);
+    transition: all .4s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show-modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container {
+    max-width: 1140px;
+    width: 100%;
+    height: calc(100% - 3rem);
+    padding: .2rem;
+    background: var(--bg-color);
+    border: 1px solid var(--text-color);
+    border-radius: .3rem;
+    transform: translateY(2rem);
+    transition: transform .4s ease-in-out;
+    overflow: hidden;
+}
+
+.show-modal .modal-container {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--modal-height);
+    margin-inline: 1rem;
+}
+
+.modal-title {
+    font-size: var(--fs-h2);
+}
+
+.modal-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.modal-close:hover {
+    color: var(--first-color);
+}
+
+.modal-content {
+    position: relative;
+    display: block;
+    height: calc(100% - var(--modal-height));
+    border-radius: .1rem;
+    overflow: hidden;
+}
+
+/* ----- MEDIA QUERIES ----- */
+@media screen and (min-width: 576px) {
+    .project-card {
+        padding: 1rem 1rem 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card:nth-child(even) {
+        direction: rtl;
+    }
+
+    .project-card:nth-child(even) .title-tag {
+        direction: ltr;
+        text-align: end;
+        margin-right: 1rem;
+    }
+
+    .project-card:nth-child(even) .title-tag::before {
+        display: none;
+    }
+
+    .project-card:nth-child(even) .title-tag::after {
+        display: block;
+    }
+
+    .project-btn {
+        margin-left: 2rem;
+        width: max-content;
+        justify-content: start;
+    }
+
+    .modal-container {
+        height: calc(100% - 5rem);
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+
+    .modal-content {
+        height: calc(100% - var(--modal-height));
+        border-radius: .2rem;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .project-card {
+        padding: 2rem;
+    }
+}
