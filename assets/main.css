@@ -1029,3 +1029,8 @@ iframe {
         right: 3rem;
     }
 }
+
+/* disable content*/
+.inactive {
+    display: none;
+}
