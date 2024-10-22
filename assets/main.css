@@ -128,7 +128,7 @@ iframe {
     font-size: var(--fs-h1);
     font-family: var(--ff-title);
     width: max-content;
-    margin: .75rem auto 2rem;
+    margin: 2rem auto 2rem;
 }
 
 .section-title::after {
@@ -325,6 +325,10 @@ iframe {
 
 .nav-link:hover::after {
     width: 25%;
+}
+
+.link-active {
+    color: #808080;
 }
 
 .nav-close {
@@ -978,6 +982,10 @@ iframe {
     
     .nav-link:hover {
         color: var(--first-color);
+    }
+
+    .link-active {
+        color: #ff7700;
     }
 
     .project-box {
