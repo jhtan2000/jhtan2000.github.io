@@ -296,4 +296,8 @@
     .project-card {
         padding: 2rem;
     }
+
+    .space {
+        height: 5rem;
+    }
 }
