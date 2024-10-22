@@ -232,6 +232,10 @@
     transform: translateY(0);
 }
 
+.space {
+    height: 2rem;
+}
+
 /* ----- MEDIA QUERIES ----- */
 @media screen and (min-width: 576px) {
     .project-card {

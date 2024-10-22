@@ -128,7 +128,7 @@ iframe {
     font-size: var(--fs-h1);
     font-family: var(--ff-title);
     width: max-content;
-    margin: 2rem auto 2rem;
+    margin: .75rem auto 2rem;
 }
 
 .section-title::after {
